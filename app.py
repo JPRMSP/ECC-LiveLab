@@ -311,23 +311,3 @@ else:
     st.warning("Mapping values differ — toy-demo suggests DDH instance is 'no'")
 
 st.markdown("---")
-
-st.header("Notes, Limitations & How to present to your professor")
-
-st.markdown("""
-- **This repository is a teaching/demo implementation**: all operations are implemented from scratch and are appropriate for classroom exploration only.
-- **Do NOT use** this code for production cryptography.
-- The **pairing** used above is a *toy illustrative mapping* — real pairings (Weil/Tate) require careful finite-field extensions and non-trivial algorithms.
-- Suggested demonstration sequence for your professor:
-  1. Show point plotting and group law (visual).
-  2. Do ECDH live: pick secrets, compute shared key.
-  3. Sign a message with ECDSA and verify.
-  4. Encrypt a short message with EC-ElGamal and decrypt.
-  5. Run toy pairing to explain why pairings can break DDH (MOV attack intuition).
-- If you'd like, I can generate:
-  - A README.md with project structure and academic references.
-  - A Colab notebook with step-by-step runnable cells and `ngrok` commands to expose Streamlit.
-  - A GitHub Actions workflow to auto-deploy the app to a testing VM.
-""")
-
-st.success("Extended app ready — you can copy this `app.py` to your repo and run with `streamlit run app.py`.")
